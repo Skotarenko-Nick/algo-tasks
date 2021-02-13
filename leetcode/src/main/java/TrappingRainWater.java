@@ -21,8 +21,8 @@
  * Constraints:
  *
  *     <br/>n == height.length
- *     <br/>0 <= n <= 3 * 104
- *     <br/>0 <= height[i] <= 105
+ *     <br/>0 <= n <= 3 * 10^4
+ *     <br/>0 <= height[i] <= 10^5
  * </p>
  */
 public class TrappingRainWater {
