@@ -40,11 +40,11 @@ public class LongestContinuousIncreasingSubsequence {
      * End calc: O-space(1), O-time(n)
      */
     public static int findLengthOfLCIS(int[] nums) {
-        int ans = 0, anchor = 0;
-        for (int i = 0; i < nums.length; ++i) {
-            if (i > 0 && nums[i-1] >= nums[i]) anchor = i;
-            ans = Math.max(ans, i - anchor + 1);
+        int mx = 0, len = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (i == 0 || nums[i] <= nums[i - 1]) len = 0;
+            mx = Math.max(mx, ++len);
         }
-        return ans;
+        return mx;
     }
 }
